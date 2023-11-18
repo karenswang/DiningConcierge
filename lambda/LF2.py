@@ -107,7 +107,7 @@ def send_email(to_email, subject, body_text):
         print(response['MessageId'])
 
 
-def lookup_data_dynamodb(key, db=None, table='yelp_restaurant_db'):
+def lookup_data_dynamodb(key, db=None, table='yelp-restaurants'):
     if not db:
         db = boto3.resource('dynamodb')
     table = db.Table(table)
